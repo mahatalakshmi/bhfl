@@ -1,7 +1,8 @@
 [build]
   functions = "functions"
-
+[functions]
+  node_bundler = "esbuild"
 [[redirects]]
-  from = "/bfhl"
-  to = "/.netlify/functions/bfhl"
-  status = 200
+    from = "/api/*"
+    to = "/.netlify/functions/:splat"
+    status = 200
